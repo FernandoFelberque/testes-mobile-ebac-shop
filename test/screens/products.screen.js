@@ -4,6 +4,8 @@ class products {
     get #chooseProductType() { return $('android.view.ViewGroup') }
     get #productName() { return $('android=new UiSelector().text("Insira o título do produto")') }
     get #publicar() { return $('id:menu_done') }
+    get #produtovalidado() { return $('id:snackbar_text') }
+  
     
 
     async NewProduct() {
@@ -21,6 +23,10 @@ class products {
 
     async publicarProduto() {
         await this.#publicar.click()
+    }
+
+    async ValidarProduto() {
+        await this.#produtovalidado.getText()
     }
 
 

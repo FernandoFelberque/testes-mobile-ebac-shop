@@ -29,6 +29,7 @@ describe('Accessar Admin Panel e Cadastrar Produto novo', () => {
         await products.productType()
         await products.setProductName(NewProductName)
         await products.publicarProduto()
+        expect(await products.ValidarProduto()).toEqual('Produto publicado')
 
     });
 })
